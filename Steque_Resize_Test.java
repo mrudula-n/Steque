@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Steque_Test {
+public class Steque_Resize_Test {
 	public static void main(String[] args) {
 		if (checkPoint_1()) {
 			System.out.println("Check Point 1 passed");
