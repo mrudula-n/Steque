@@ -109,10 +109,9 @@ public class Steque<Item> implements Iterable<Item> {
      * return the number of elements currently in the steque.
      * @return size as integer.
      */
-    //time complexity:O(n), space complexity: O(n)
+    
     public int size() {
-        int n=0;
-        return n;
+        
         
         }
         
@@ -123,26 +122,17 @@ public class Steque<Item> implements Iterable<Item> {
      * stored in steque.
      * 
      */
-    //time complexity:O(1), space complexity: O(1)
+    
     public Iterator<Item> iterator(){
-        return new StequeIterator();
+        
     }
     private class StequeIterator implements Iterator<Item> {
-        Node current = first;
-        public boolean hasNext() {
-            return current!=null;
-        }
-        public Item next(){
-            if(!hasNext()) throw new NoSuchElementException();
-            else{
-                Item item = current.item;
-                current = current.next;
-                return item;
+       
             }
     
         }    
         public void remove(){
-            throw new UnsupportedOperationException();
+            
         }
     
     }
@@ -152,12 +142,9 @@ public class Steque<Item> implements Iterable<Item> {
         st.push(20);
         st.push(72);
         st.pop();
-        st.size();
+       
         st.isEmpty();
-        Iterator<Integer> iterate = st.iterator();
-
-        while (iterate.hasNext()){
-            System.out.println(iterate.next());
+        
         }
         
     }
