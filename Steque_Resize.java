@@ -84,7 +84,7 @@ public class Steque_Resize<Item> implements Iterable<Item> {
      * pops a least recent item in steque.
      * @return Item object from steque.
      */
-     //time complexity: O(1), space complexity: O(1
+     //time complexity: O(1), space complexity: O(1)
     public Item pop() {
         if(isEmpty()) throw new NoSuchElementException();
         if(size>0 && size == stack.length/4) resize(stack.length/2);
