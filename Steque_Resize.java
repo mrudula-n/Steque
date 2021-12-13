@@ -110,7 +110,7 @@ public class Steque_Resize<Item> implements Iterable<Item> {
      */
      //time complexity: O(1), space complexity: 0
     public int size() {
-        return size;
+        
        
     }
     
@@ -119,29 +119,22 @@ public class Steque_Resize<Item> implements Iterable<Item> {
      * stored in steque.
      * 
      */
-     //time complexity: O(1), space complexity: 0
+     
     public Iterator<Item> iterator() {
-        return new ArrayIterator();
+       
     }
     public class ArrayIterator implements Iterator<Item> {
-        public int i = size-1;
-
-     
-        public boolean hasNext() {
-            return i >= 0;
+       
         }
 
       
         public void remove() {
-            throw new UnsupportedOperationException();
+            
         }
 
         
         public Item next() {
-            if(!hasNext()) throw new NoSuchElementException();
-            Item item = stack[i];
-            i--;
-            return item;
+           
     }
 }
     public static void main(String[] args){
@@ -154,13 +147,6 @@ public class Steque_Resize<Item> implements Iterable<Item> {
         s.push(15);
         s.enqueue(25);
         System.out.println("empty:"+s.isEmpty());
-        System.out.println("size:"+s.size());
-        Iterator<Integer> c = s.iterator();
-        System.out.println("steque elements");
-        while(c.hasNext())
-        System.out.println(c.next());
-        System.out.println("popped elements");
-        while(!s.isEmpty()){
-           System.out.println(s.pop());
+        
        }
-    }}
+    }
