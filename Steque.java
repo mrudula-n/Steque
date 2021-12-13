@@ -73,12 +73,7 @@ public class Steque<Item> implements Iterable<Item> {
      */
     //time complexity:O(1), space complexity: O(n)
     public void push(Item item) {
-        if(item == null) throw new IllegalArgumentException();
-        Node oldfirst = first;
-        first = new Node();
-        first.item = item;
-        first.next = oldfirst;
-        if(last == null) last=first;
+        
 
     }
     
@@ -88,10 +83,7 @@ public class Steque<Item> implements Iterable<Item> {
      */
     //time complexity:O(1), space complexity: O(n)
     public Item pop() {
-        if(isEmpty()) throw new NoSuchElementException();
-        Item item = first.item;
-        first = first.next;
-        return item;
+        
 
     }
     
@@ -101,7 +93,7 @@ public class Steque<Item> implements Iterable<Item> {
      */
     //time complexity:O(1), space complexity: O(1)
     public boolean isEmpty() {
-        return first==null || last ==null;
+        
 
     }
     
@@ -111,8 +103,7 @@ public class Steque<Item> implements Iterable<Item> {
      */
     //time complexity:O(n), space complexity: O(n)
     public int size() {
-        int n=0;
-        return n;
+        
         
         }
         
@@ -125,39 +116,22 @@ public class Steque<Item> implements Iterable<Item> {
      */
     //time complexity:O(1), space complexity: O(1)
     public Iterator<Item> iterator(){
-        return new StequeIterator();
+        
     }
     private class StequeIterator implements Iterator<Item> {
-        Node current = first;
-        public boolean hasNext() {
-            return current!=null;
-        }
-        public Item next(){
-            if(!hasNext()) throw new NoSuchElementException();
-            else{
-                Item item = current.item;
-                current = current.next;
-                return item;
+       
             }
     
         }    
         public void remove(){
-            throw new UnsupportedOperationException();
+            
         }
     
     }
     public  static void main(String[] args){
         Steque<Integer> st = new Steque<Integer>();
         st.enqueue(33);
-        st.push(20);
-        st.push(72);
-        st.pop();
-        st.size();
-        st.isEmpty();
-        Iterator<Integer> iterate = st.iterator();
-
-        while (iterate.hasNext()){
-            System.out.println(iterate.next());
+       
         }
         
     }
