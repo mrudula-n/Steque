@@ -72,26 +72,18 @@ public class Steque_Resize<Item> implements Iterable<Item> {
      * inserts an item in the steque in stack fashion.
      * @param item Item to be inserted.
      */
-      //time complexity: O(1) space complexity: O(n)
+      
     public void push(Item item) {
-        if(item==null) throw new IllegalArgumentException();
-        if(size >= stack.length) resize(2*stack.length);
-        stack[size] = item;
-        size++;
+        
     }
     
     /**
      * pops a least recent item in steque.
      * @return Item object from steque.
      */
-     //time complexity: O(1), space complexity: O(1
+     
     public Item pop() {
-        if(isEmpty()) throw new NoSuchElementException();
-        if(size>0 && size == stack.length/4) resize(stack.length/2);
-        Item item = stack[size-1];
-        stack[size-1] = null;
-        size--;
-        return item;
+        
         
     }
     
@@ -99,18 +91,18 @@ public class Steque_Resize<Item> implements Iterable<Item> {
      * checks to see if steque is empty.
      * @return true if steque is empty, false otherwise.
      */
-    //time complexity: O(1), space complexity: 0
+   
     public boolean isEmpty() {
-        return size==0;  
+          
     }
     
     /**
      * return the number of elements currently in the steque.
      * @return size as integer.
      */
-     //time complexity: O(1), space complexity: 0
+     
     public int size() {
-        return size;
+        
        
     }
     
@@ -119,29 +111,17 @@ public class Steque_Resize<Item> implements Iterable<Item> {
      * stored in steque.
      * 
      */
-     //time complexity: O(1), space complexity: 0
+     
     public Iterator<Item> iterator() {
-        return new ArrayIterator();
+       
     }
     public class ArrayIterator implements Iterator<Item> {
-        public int i = size-1;
-
-     
-        public boolean hasNext() {
-            return i >= 0;
-        }
-
-      
-        public void remove() {
-            throw new UnsupportedOperationException();
+        
         }
 
         
         public Item next() {
-            if(!hasNext()) throw new NoSuchElementException();
-            Item item = stack[i];
-            i--;
-            return item;
+            
     }
 }
     public static void main(String[] args){
@@ -149,18 +129,6 @@ public class Steque_Resize<Item> implements Iterable<Item> {
         s.enqueue(14);
         s.enqueue(17);
         s.enqueue(20);
-        s.push(5);
-        s.push(10);
-        s.push(15);
-        s.enqueue(25);
-        System.out.println("empty:"+s.isEmpty());
-        System.out.println("size:"+s.size());
-        Iterator<Integer> c = s.iterator();
-        System.out.println("steque elements");
-        while(c.hasNext())
-        System.out.println(c.next());
-        System.out.println("popped elements");
-        while(!s.isEmpty()){
-           System.out.println(s.pop());
+        
        }
-    }}
+    }
